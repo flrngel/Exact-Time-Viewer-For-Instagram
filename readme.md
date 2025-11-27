@@ -4,14 +4,16 @@ This is a simple Chrome Extension that displays the exact time an Instagram was 
 
 [Available on the Chrome Web Store](https://chrome.google.com/webstore/detail/exact-time-viewer-for-ins/koffnfmgjmoopfgelgbbkjmdnppadlae).
 
-### Development
+### How it works
 
-Use `yarn` to install the package file.
+The content script watches the page for Instagram `<time>` elements that expose a `datetime` attribute and replaces the relative “5h/2d” label with a formatted local timestamp (including seconds and your time zone). It also keeps the formatted value in the element `title` for easy hover previews and accessibility.
 
-Run with `gulp watch`.
+### Usage
 
-Load the `build/` directory in developer mode on `chrome://extensions`.
+No build step is required anymore. Load the repository directory as an unpacked extension:
 
-Reload the extension via Chrome when testing.
+1. Visit `chrome://extensions`
+2. Enable Developer Mode
+3. Choose “Load unpacked” and select the project directory containing `manifest.json`
 
-To generate a build, use Chrome’s “Pack Extension” button on `chrome://extensions` and attach the private key from previous packaged versions.
+Chrome will pick up `content/content.js` directly, and the icons are referenced from `content/icons`.
