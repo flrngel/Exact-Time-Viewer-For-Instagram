@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Exact Time Viewer for Instagram",
   "icons": {
     "16": "icon_16.png",
@@ -7,7 +7,7 @@
     "128": "icon_128.png"
   },
   "description": "Shows the exact time an Instagram photo or video was posted, rather than the date, or some time ago.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "content_scripts": [
     {
       "matches": ["*://*.instagram.com/*"],
